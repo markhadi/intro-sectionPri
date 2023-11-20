@@ -1,3 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Epilogue", sans-serif;
+    font-weight: 500;
+  }
+}
+
+#root {
+  @apply min-h-screen flex flex-col items-center leading-none bg-[#FAFAFA];
+}
+
+nav {
+  @apply w-full max-w-[1408px] flex px-6 py-5 items-center justify-between text-[15px] max-md:text-[16px] text-[#696969] tracking-[-0.03em]
+          max-lg:px-4
+          max-md:py-6;
+}
+
+nav a {
+  @apply transition duration-300 hover:text-[#141414];
+}
+
+.slide-left {
+  -webkit-animation: slide-left 300ms ease-in-out both;
+  animation: slide-left 300ms ease-in-out both;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(240px);
+    transform: translateX(240px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(240px);
+    transform: translateX(240px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.slide-right {
+  -webkit-animation: slide-right 300ms ease-in-out both;
+  animation: slide-right 300ms ease-in-out both;
+}
+
+@-webkit-keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(240px);
+    transform: translateX(240px);
+  }
+}
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(240px);
+    transform: translateX(240px);
+  }
+}
