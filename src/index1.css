@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  @apply font-[Epilogue] font-medium text-AlmostBlack leading-normal min-h-screen flex flex-col items-center;
+}
+
+nav,
+main {
+  @apply max-w-[1408px] w-full;
+}
+
+main {
+  @apply grid grid-rows-[max-content_max-content];
+}
+
+main picture {
+  @apply grid place-content-center;
+}
+
+main picture img {
+  @apply w-full max-w-max;
+}
+
+main section {
+  @apply flex items-center justify-center;
+}
+main section div {
+  @apply flex flex-col items-center max-w-[520px] px-4 py-7;
+}
+
+main section div h1 {
+  @apply text-AlmostBlack text-[36px] font-bold leading-none tracking-[-0.01em] mb-4;
+}
+
+main section div p {
+  @apply text-MediumGray text-center text-[16px] leading-[28px] tracking-[0.005em] mb-6;
+}
+
+main section div button {
+  @apply grid place-content-center bg-AlmostBlack text-AlmostWhite text-[16px] font-bold tracking-[-0.01em] h-[48px] w-[136px] rounded-2xl mb-12 transition-all duration-300 
+        hover:bg-AlmostBlack/80;
+}
+
+main section div span {
+  @apply flex items-center gap-7 w-max;
+}
+
+main section div span img:first-child,
+main section div span img:nth-child(3) {
+  @apply h-[14px];
+}
+
+main section div span img:nth-child(2) {
+  @apply w-[54px];
+}
+
+main section div span img:last-child {
+  @apply h-[16px];
+}
